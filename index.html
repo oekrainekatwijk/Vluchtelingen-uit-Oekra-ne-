@@ -32,19 +32,11 @@
             max-width: 1100px;
             margin: 0 auto;
         }
-        /* Styling voor de nieuwe interactieve taalknoppen */
-        .lang-switch button {
-            background: none;
-            border: none;
+        .lang-switch a {
+            text-decoration: none;
             color: var(--primary-color);
             font-weight: bold;
-            font-size: 0.9rem;
-            cursor: pointer;
-            padding: 2px 6px;
-            font-family: inherit;
-        }
-        .lang-switch button:hover {
-            text-decoration: underline;
+            margin-right: 10px;
         }
         .container {
             max-width: 1100px;
@@ -119,11 +111,8 @@
     <header>
         <div class="meta-nav">
             <div class="lang-switch">
-    🌐 
-    <a href="#" style="text-decoration: none; color: var(--primary-color); font-weight: bold; margin-right: 5px;">NL</a> | 
-    <a href="https://google.com" target="_blank" style="text-decoration: none; color: var(--primary-color); font-weight: bold; margin-right: 5px; margin-left: 5px;">UA</a> | 
-    <a href="https://google.com" target="_blank" style="text-decoration: none; color: var(--primary-color); font-weight: bold; margin-left: 5px;">EN</a>
-</div>
+                🌐 <strong>NL</strong> | <a href="#">UA</a> | <a href="#">EN</a>
+            </div>
             <div>
                 <span>Mobiel wireframe: Inhoud | Direct Regelen</span>
             </div>
@@ -184,7 +173,7 @@
 
         <div class="menu-section">
             <h2>🛡️ Veiligheid</h2>
-            <p>Uw veiligheid is belangrijk. Bel bij spoed altijd 112. Heeft u hulp van de politie nodig zonder spoed, bel dan 0900 8844. Meld overlast, discriminatie, geweld of andere veiligheidsproblemen bij de gemeente, politie of beheerder van uw opvanglocatie. In Nederland heeft iedereen recht op een safe woon- and leefomgeving.</p>
+            <p>Uw veiligheid is belangrijk. Bel bij spoed altijd 112. Heeft u hulp van de politie nodig zonder spoed, bel dan 0900 8844. Meld overlast, discriminatie, geweld of andere veiligheidsproblemen bij de gemeente, politie of beheerder van uw opvanglocatie. In Nederland heeft iedereen recht op een veilige woon- and leefomgeving.</p>
             <div class="sub-topics">Onderwerpen: Noodnummers, mensenhandel en arbeidsuitbuiting.</div>
         </div>
 
@@ -204,27 +193,6 @@
     <footer>
         <p>&copy; 2026 Gemeente Katwijk - Oekraïneportaal</p>
     </footer>
-
-    <!-- Google Translate Script (Onzichtbaar op de achtergrond) -->
-    <div id="google_translate_element" style="display:none;"></div>
-    <script type="text/javascript">
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-            pageLanguage: 'nl',
-            includedLanguages: 'nl,uk,en',
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-            autoDisplay: false
-        }, 'google_translate_element');
-    }
-    function changeLanguage(langCode) {
-        var select = document.querySelector('.goog-te-combo');
-        if (select) {
-            select.value = langCode;
-            select.dispatchEvent(new Event('change'));
-        }
-    }
-    </script>
-    <script type="text/javascript" src="//://google.com"></script>
 
 </body>
 </html>
