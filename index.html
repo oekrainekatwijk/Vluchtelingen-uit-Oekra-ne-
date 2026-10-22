@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oekraïneportaal Katwijk</title>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --accent-color: #f8f9fa;
+            --text-color: #333;
+            --border-color: #ddd;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+        header {
+            background-color: var(--accent-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 10px 20px;
+        }
+        .meta-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .lang-switch a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .hero {
+            background-color: #e9ecef;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .hero h1 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+        .warning-box {
+            background-color: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            font-weight: bold;
+        }
+        .grid-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+        .action-btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            transition: background 0.2s;
+        }
+        .action-btn:hover {
+            background-color: #004085;
+        }
+        .menu-section {
+            border-bottom: 1px solid var(--border-color);
+            padding: 25px 0;
+        }
+        .menu-section h2 {
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 0;
+        }
+        .sub-topics {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        footer {
+            background-color: var(--accent-color);
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="meta-nav">
+            <div class="lang-switch">
+                🌐 <strong>NL</strong> | <a href="#">UA</a> | <a href="#">EN</a>
+            </div>
+            <div>
+                <span>Mobiel wireframe: Inhoud | Direct Regelen</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="hero">
+            <h1>Oekraïneportaal Katwijk</h1>
+            <p>Bent u gevlucht uit Oekraïne en verblijft u in Katwijk? Op deze website vindt u informatie over wonen, registratie, leefgeld, werk, zorg, onderwijs, veiligheid en vertrek uit Nederland.</p>
+            <div class="warning-box">
+                Belangrijk: kom niet zonder afspraak naar een opvanglocatie.
+            </div>
+        </section>
+
+        <h2>⚡ Direct Regelen</h2>
+        <div class="grid-buttons">
+            <a href="#" class="action-btn">🏠 Opvang aanvragen</a>
+            <a href="#" class="action-btn">💶 Leefgeld aanvragen</a>
+            <a href="#" class="action-btn">🔄 Wijziging doorgeven</a>
+            <a href="#" class="action-btn">📞 Contact opnemen</a>
+            <a href="#" class="action-btn">⚠️ Klacht indienen</a>
+        </div>
+
+        <h2>Hoofdmenu</h2>
+
+        <div class="menu-section">
+            <h2>🏠 Wonen</h2>
+            <p>Woont u als Oekraïense ontheemde in Katwijk of zoekt u woonruimte? De gemeente helpt bij opvang, registratie and begeleiding.</p>
+            <div class="sub-topics">Onderwerpen: Opvang, particuliere opvang, huisregels en aankomst in Nederland.</div>
+        </div>
+
+        <div class="menu-section">
+            <h2>🪪 Registratie</h2>
+            <p>Woont u als Oekraïense ontheemde in Katwijk? Meld u zo snel mogelijk aan bij de gemeente. Na registratie ontvangt u een burgerservicenummer (BSN) en kunt u gebruikmaken van voorzieningen zoals leefgeld, zorg, onderwijs en ondersteuning bij werk. Neem uw identiteitsbewijs en adresgegevens mee naar de afspraak.</p>
+            <div class="sub-topics">Onderwerpen: BRP, BSN, IND en tijdelijke bescherming.</div>
+        </div>
+
+        <div class="menu-section">
+            <h2>💶 Geld</h2>
+            <p>Oekraïense ontheemden kunnen onder voorwaarden leefgeld ontvangen. Dit geld is bedoeld voor dagelijkse uitgaven zoals kleding, eten en persoonlijke verzorging. Om leefgeld te ontvangen moet u geregistreerd zijn bij de gemeente. Heeft u werk gevonden of verandert uw situatie? Geef dit dan direct door aan de gemeente.</p>
+            <div class="sub-topics">Onderwerpen: Leefgeld, inkomen en eigen bijdrage.</div>
+        </div>
+
+        <div class="menu-section">
+            <h2>💼 Werk</h2>
+            <p>Oekraïense ontheemden mogen in Nederland werken. Werk helpt bij zelfstandigheid, inkomen en integratie. Om te kunnen werken heeft u een BSN nodig and moet u geregistreerd zijn bij de gemeente. Heeft u hulp nodig bij het zoeken naar werk of het maken van een cv? De gemeente kan u doorverwijzen naar organisaties die u verder helpen.</p>
+            <div class="sub-topics">Onderwerpen: Werkcafé, stage en vrijwilligerswerk.</div>
+        </div>
+
+        <div class="menu-section">
+            <h2>🏥 Gezondheid & Gezin</h2>
+            <p>Woont u als Oekraïense ontheemde in Katwijk? Dan heeft u recht op medische zorg en ondersteuning voor uw gezin. U kunt terecht bij een huisarts, ziekenhuis of andere zorgverleners. Kinderen hebben recht op onderwijs en ondersteuning bij het leren van de Nederlandse taal. Bij spoed belt u altijd 112.</p>
+            <div class="sub-topics">Onderwerpen: Zorg, onderwijs en kinderopvang.</div>
+        </div>
+
+        <div class="menu-section">
+            <h2>🛡️ Veiligheid</h2>
+            <p>Uw veiligheid is belangrijk. Bel bij spoed altijd 112. Heeft u hulp van de politie nodig zonder spoed, bel dan 0900 8844. Meld overlast, discriminatie, geweld of andere veiligheidsproblemen bij de gemeente, politie of beheerder van uw opvanglocatie. In Nederland heeft iedereen recht op een veilige woon- en leefomgeving.</p>
+            <div class="sub-topics">Onderwerpen: Noodnummers, mensenhandel en arbeidsuitbuiting.</div>
+        </div>
+
+        <div class="menu-section">
+            <h2>🚚 Verhuizen & Vertrek</h2>
+            <p>Gaat u verhuizen binnen Nederland, verlaat u de opvanglocatie of keert u terug naar Oekraïne? Meld veranderingen in uw woon- of verblijfssituatie altijd bij de gemeente. Zo voorkomt u problemen met uw registratie, leefgeld of andere voorzieningen.</p>
+            <div class="sub-topics">Onderwerpen: Verhuizing, vertrek en terugkeer.</div>
+        </div>
+
+        <div class="menu-section">
+            <h2>📞 Contact</h2>
+            <p>Heeft u vragen over uw verblijf in Katwijk? Neem contact op met de gemeente. Wij helpen u graag met vragen over registratie, leefgeld, wonen, werk, onderwijs, gezondheid en andere voorzieningen.</p>
+            <div class="sub-topics">Onderwerpen: Team Oekraïne en organisaties.</div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Gemeente Katwijk - Prototype Voorbeeld voor ICT</p>
+    </footer>
+
+</body>
+</html>
