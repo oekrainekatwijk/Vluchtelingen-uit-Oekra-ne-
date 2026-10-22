@@ -116,12 +116,21 @@
         <li><strong>Tijdelijke afwezigheid (28-dagenregel):</strong> U mag maximaal 28 dagen per kalenderjaar buiten de opvanglocatie verblijven (bijvoorbeeld voor vakantie of familiebezoek). U moet uw afwezigheid altijd vooraf melden bij de locatiemanager. Wie zonder melding wegblijft of langer dan 28 dagen afwezig is, verliest definitief zijn opvangplek en het leefgeld.</li>
     </ul>
 
-    <!-- Optionele download-sectie onderaan de pagina -->
-    <div class="file-box">
-        <h3>📄 Documenten downloaden</h3>
-        <p>Wilt u deze informatie of de uitgebreide officiële huisregels als document opslaan?</p>
-        <a href="huisregels.pdf" download class="download-btn">Download Huisregels (PDF)</a>
-    </div>
+    <!-- Geïntegreerde download-sectie onderaan de pagina -->
+<div class="file-box">
+    <h3>📄 Documenten downloaden</h3>
+    <p>Wilt u deze pagina met informatie en huisregels direct opslaan als document?</p>
+    <button onclick="window.print()" class="download-btn" style="cursor: pointer;">Download deze pagina (PDF)</button>
+</div>
+
+<!-- Het onzichtbare print-filter: dit verbergt de hele box op de gedownloade PDF -->
+<style>
+    @media print {
+        .file-box {
+            display: none !important;
+        }
+    }
+</style>
 
 </body>
 </html>
