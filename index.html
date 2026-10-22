@@ -32,11 +32,19 @@
             max-width: 1100px;
             margin: 0 auto;
         }
-        .lang-switch a {
-            text-decoration: none;
+        /* Styling voor de nieuwe interactieve taalknoppen */
+        .lang-switch button {
+            background: none;
+            border: none;
             color: var(--primary-color);
             font-weight: bold;
-            margin-right: 10px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            padding: 2px 6px;
+            font-family: inherit;
+        }
+        .lang-switch button:hover {
+            text-decoration: underline;
         }
         .container {
             max-width: 1100px;
@@ -111,7 +119,9 @@
     <header>
         <div class="meta-nav">
             <div class="lang-switch">
-                🌐 <strong>NL</strong> | <a href="#">UA</a> | <a href="#">EN</a>
+                🌐 <button onclick="changeLanguage('nl')">NL</button> | 
+                <button onclick="changeLanguage('uk')">UA</button> | 
+                <button onclick="changeLanguage('en')">EN</button>
             </div>
             <div>
                 <span>Mobiel wireframe: Inhoud | Direct Regelen</span>
@@ -122,7 +132,7 @@
     <div class="container">
         <section class="hero">
             <h1>Oekraïneportaal Katwijk</h1>
-            <p>Bent u gevlucht uit Oekraïne en verblijft u in Katwijk? Op deze website vindt u informatie over wonen, registratie, leefgeld, werk, zorg, onderwijs, veiligheid en vertrek uit Nederland.</p>
+            <p>Bent u gevlucht uit Oekraïne and verblijft u in Katwijk? Op deze website vindt u informatie over wonen, registratie, leefgeld, werk, zorg, onderwijs, veiligheid and vertrek uit Nederland.</p>
             <div class="warning-box">
                 Belangrijk: kom niet zonder afspraak naar een opvanglocatie.
             </div>
@@ -139,41 +149,41 @@
 
         <h2>Hoofdmenu</h2>
 
-    <a href="wonen.html" style="text-decoration: none; color: inherit; display: block;">
-    <div class="menu-section">
-        <h2>🏠 Wonen</h2>
-        <p>Woont u als Oekraïense ontheemde in Katwijk of zoekt u woonruimte? De gemeente helpt bij opvang, registratie and begeleiding.</p>
-        <div class="sub-topics">Onderwerpen: Opvang, particuliere opvang en huisregels.</div>
-    </div>
-</a>
+        <a href="wonen.html" style="text-decoration: none; color: inherit; display: block;">
+            <div class="menu-section">
+                <h2>🏠 Wonen</h2>
+                <p>Woont u als Oekraïense ontheemde in Katwijk of zoekt u woonruimte? De gemeente helpt bij opvang, registratie and begeleiding.</p>
+                <div class="sub-topics">Onderwerpen: Opvang, particuliere opvang en huisregels.</div>
+            </div>
+        </a>
 
         <div class="menu-section">
             <h2>🪪 Registratie</h2>
-            <p>Woont u als Oekraïense ontheemde in Katwijk? Meld u zo snel mogelijk aan bij de gemeente. Na registratie ontvangt u een burgerservicenummer (BSN) en kunt u gebruikmaken van voorzieningen zoals leefgeld, zorg, onderwijs en ondersteuning bij werk. Neem uw identiteitsbewijs en adresgegevens mee naar de afspraak.</p>
+            <p>Woont u als Oekraïense ontheemde in Katwijk? Meld u zo snel mogelijk aan bij de gemeente. Na registratie ontvangt u een burgerservicenummer (BSN) and kunt u gebruikmaken van voorzieningen zoals leefgeld, zorg, onderwijs and ondersteuning bij werk. Neem uw identiteitsbewijs and adresgegevens mee naar de afspraak.</p>
             <div class="sub-topics">Onderwerpen: BRP, BSN, IND en tijdelijke bescherming.</div>
         </div>
 
         <div class="menu-section">
             <h2>💶 Geld</h2>
-            <p>Oekraïense ontheemden kunnen onder voorwaarden leefgeld ontvangen. Dit geld is bedoeld voor dagelijkse uitgaven zoals kleding, eten en persoonlijke verzorging. Om leefgeld te ontvangen moet u geregistreerd zijn bij de gemeente. Heeft u werk gevonden of verandert uw situatie? Geef dit dan direct door aan de gemeente.</p>
+            <p>Oekraïense ontheemden kunnen onder voorwaarden leefgeld ontvangen. Dit geld is bedoeld voor dagelijkse uitgaven zoals kleding, eten and persoonlijke verzorging. Om leefgeld te ontvangen moet u geregistreerd zijn bij de gemeente. Heeft u werk gevonden of verandert uw situatie? Geef dit dan direct door aan de gemeente.</p>
             <div class="sub-topics">Onderwerpen: Leefgeld, inkomen en eigen bijdrage.</div>
         </div>
 
         <div class="menu-section">
             <h2>💼 Werk</h2>
-            <p>Oekraïense ontheemden mogen in Nederland werken. Werk helpt bij zelfstandigheid, inkomen en integratie. Om te kunnen werken heeft u een BSN nodig and moet u geregistreerd zijn bij de gemeente. Heeft u hulp nodig bij het zoeken naar werk of het maken van een cv? De gemeente kan u doorverwijzen naar organisaties die u verder helpen.</p>
+            <p>Oekraïense ontheemden mogen in Nederland werken. Werk helpt bij zelfstandigheid, inkomen and integratie. Om te kunnen werken heeft u een BSN nodig and moet u geregistreerd zijn bij de gemeente. Heeft u hulp nodig bij het zoeken naar werk of het maken van een cv? De gemeente kan u doorverwijzen naar organisaties die u verder helpen.</p>
             <div class="sub-topics">Onderwerpen: Werkcafé, stage en vrijwilligerswerk.</div>
         </div>
 
         <div class="menu-section">
             <h2>🏥 Gezondheid & Gezin</h2>
-            <p>Woont u als Oekraïense ontheemde in Katwijk? Dan heeft u recht op medische zorg en ondersteuning voor uw gezin. U kunt terecht bij een huisarts, ziekenhuis of andere zorgverleners. Kinderen hebben recht op onderwijs en ondersteuning bij het leren van de Nederlandse taal. Bij spoed belt u altijd 112.</p>
+            <p>Woont u als Oekraïense ontheemde in Katwijk? Dan heeft u recht op medische zorg and ondersteuning voor uw gezin. U kunt terecht bij een huisarts, ziekenhuis of andere zorgverleners. Kinderen hebben recht op onderwijs and ondersteuning bij het leren van de Nederlandse taal. Bij spoed belt u altijd 112.</p>
             <div class="sub-topics">Onderwerpen: Zorg, onderwijs en kinderopvang.</div>
         </div>
 
         <div class="menu-section">
             <h2>🛡️ Veiligheid</h2>
-            <p>Uw veiligheid is belangrijk. Bel bij spoed altijd 112. Heeft u hulp van de politie nodig zonder spoed, bel dan 0900 8844. Meld overlast, discriminatie, geweld of andere veiligheidsproblemen bij de gemeente, politie of beheerder van uw opvanglocatie. In Nederland heeft iedereen recht op een veilige woon- en leefomgeving.</p>
+            <p>Uw veiligheid is belangrijk. Bel bij spoed altijd 112. Heeft u hulp van de politie nodig zonder spoed, bel dan 0900 8844. Meld overlast, discriminatie, geweld of andere veiligheidsproblemen bij de gemeente, politie of beheerder van uw opvanglocatie. In Nederland heeft iedereen recht op een veilige woon- and leefomgeving.</p>
             <div class="sub-topics">Onderwerpen: Noodnummers, mensenhandel en arbeidsuitbuiting.</div>
         </div>
 
@@ -185,15 +195,35 @@
 
         <div class="menu-section">
             <h2>📞 Contact</h2>
-            <p>Heeft u vragen over uw verblijf in Katwijk? Neem contact op met de gemeente. Wij helpen u graag met vragen over registratie, leefgeld, wonen, werk, onderwijs, gezondheid en andere voorzieningen.</p>
-            <div class="sub-topics">Onderwerpen: Team Oekraïne en organisaties.</div>
+            <p>Heeft u vragen over uw verblijf in Katwijk? Neem contact op met de gemeente. Wij helpen u graag met vragen over registratie, leefgeld, wonen, werk, onderwijs, gezondheid and andere voorzieningen.</p>
+            <div class="sub-topics">Onderwerpen: Team Oekraïne en organisatie.</div>
         </div>
-
     </div>
 
     <footer>
-        <p>&copy; 2026 Gemeente Katwijk - Prototype Voorbeeld voor ICT</p>
+        <p>&copy; 2026 Gemeente Katwijk - Oekraïneportaal</p>
     </footer>
+
+    <!-- Google Translate Script (Onzichtbaar op de achtergrond) -->
+    <div id="google_translate_element" style="display:none;"></div>
+    <script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'nl',
+            includedLanguages: 'nl,uk,en',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false
+        }, 'google_translate_element');
+    }
+    function changeLanguage(langCode) {
+        var select = document.querySelector('.goog-te-combo');
+        if (select) {
+            select.value = langCode;
+            select.dispatchEvent(new Event('change'));
+        }
+    }
+    </script>
+    <script type="text/javascript" src="//://google.com"></script>
 
 </body>
 </html>
