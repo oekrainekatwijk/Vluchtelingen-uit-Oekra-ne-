@@ -3,197 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oekraïneportaal Katwijk</title>
+    <title>Opvang en wonen voor Oekraïense ontheemden</title>
     <style>
-        :root {
-            --primary-color: #0056b3;
-            --accent-color: #f8f9fa;
-            --text-color: #333;
-            --border-color: #ddd;
-        }
+        /* Basisstyling voor de webpagina */
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: Arial, sans-serif;
             line-height: 1.6;
-            color: var(--text-color);
-            margin: 0;
-            padding: 0;
-            background-color: #fff;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            color: #333;
         }
-        header {
-            background-color: var(--accent-color);
-            border-bottom: 1px solid var(--border-color);
-            padding: 10px 20px;
+        h1 {
+            color: #1a1a1a;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
         }
-        .meta-nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.9rem;
-            max-width: 1100px;
-            margin: 0 auto;
+        h2 {
+            color: #0056b3;
+            margin-top: 30px;
         }
-        .lang-switch a {
-            text-decoration: none;
-            color: var(--primary-color);
-            font-weight: bold;
-            margin-right: 10px;
-        }
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .hero {
-            background-color: #e9ecef;
-            padding: 30px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-        }
-        .hero h1 {
+        h3 {
             margin-top: 0;
-            color: var(--primary-color);
+            color: #222;
         }
-        .warning-box {
-            background-color: #fff3cd;
-            border-left: 5px solid #ffc107;
-            padding: 15px;
-            margin: 15px 0;
-            font-weight: bold;
+        ul {
+            padding-left: 20px;
         }
-        .grid-buttons {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 15px;
-            margin-bottom: 40px;
+        li {
+            margin-bottom: 8px;
         }
-        .action-btn {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 15px;
+        hr {
+            border: 0;
+            height: 1px;
+            background: #ccc;
+            margin: 40px 0;
+        }
+        
+        /* Gedeelde styling voor alle knoppen op de site */
+        .btn {
             text-decoration: none;
+            color: white !important;
+            padding: 12px 20px;
+            border: none;
             border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
             font-weight: bold;
-            text-align: center;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             transition: background 0.2s;
         }
-        .action-btn:hover {
-            background-color: #004085;
+
+        /* Groene downloadknop bovenaan */
+        .pdf-btn {
+            background-color: #28a745;
+            margin-bottom: 30px;
         }
-        .menu-section {
-            border-bottom: 1px solid var(--border-color);
-            padding: 25px 0;
+        .pdf-btn:hover { background-color: #218838; }
+
+        /* Blokken onderaan voor Documenten en Formulieren */
+        .content-box {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 30px;
         }
-        .menu-section h2 {
-            color: var(--primary-color);
+        
+        /* Knoppenmenu voor de diverse formulieren */
+        .button-container {
             display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-top: 0;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 15px;
         }
-        .sub-topics {
-            font-size: 0.85rem;
-            color: #666;
-            margin-top: 10px;
-            font-style: italic;
-        }
-        footer {
-            background-color: var(--accent-color);
+        .form-btn {
+            display: block;
             text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-            font-size: 0.9rem;
-            border-top: 1px solid var(--border-color);
+            padding: 14px 20px;
+        }
+
+        /* Kleuren per knop/afdeling */
+        .btn-opvang { background-color: #d9534f; } /* Rood */
+        .btn-opvang:hover { background-color: #c9302c; }
+        
+        .btn-leefgeld { background-color: #0275d8; } /* Blauw */
+        .btn-leefgeld:hover { background-color: #025aa5; }
+        
+        .btn-wijziging { background-color: #f0ad4e; } /* Oranje */
+        .btn-wijziging:hover { background-color: #ec971f; }
+
+        .btn-contact { background-color: #5cb85c; } /* Groen */
+        .btn-contact:hover { background-color: #449d44; }
+
+        .btn-klacht { background-color: #6c757d; } /* Grijs */
+        .btn-klacht:hover { background-color: #5a6268; }
+
+        /* ONZICHTBAAR PRINT-FILTER SPECIAAL VOOR DE PDF */
+        @media print {
+            /* Verberg alle knoppen en de downloadboxen op de PDF */
+            .pdf-btn, .content-box {
+                display: none !important;
+            }
+            /* Optimaliseer de overgebleven informatietekst voor de PDF */
+            body {
+                font-size: 12pt;
+                color: #000;
+                background: #fff;
+                margin: 0;
+                padding: 0;
+            }
+            h1 { border-bottom: 1px solid #000; }
+            h2 { color: #000; page-break-after: avoid; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="meta-nav">
-            <div class="lang-switch">
-                🌐 <strong>NL</strong> | <a href="#">UA</a> | <a href="#">EN</a>
-            </div>
-            <div>
-                <span>Mobiel wireframe: Inhoud | Direct Regelen</span>
-            </div>
+    <h1>Opvang en wonen voor Oekraïense ontheemden</h1>
+    
+    <p>Bent u gevlucht uit Oekraïne en verblijft u in onze gemeente? Of vangt u als inwoner ontheemden uit Oekraïne op? Op deze pagina vindt u alle informatie over de aankomst in Nederland, de verschillende soorten opvang en de geldende huisregels.</p>
+    <p>De Europese Richtlijn Tijdelijke Bescherming (RTB) geeft Oekraïense ontheemden recht op onderdak, medische zorg, leefgeld en onderwijs.</p>
+
+    <!-- DIRECTE PDF DOWNLOAD VAN DEZE PAGINA -->
+    <button class="btn pdf-btn" onclick="window.print()">
+        📄 Download deze pagina als PDF
+    </button>
+
+    <hr>
+
+    <h2>1. Aankomst in onze gemeente: Wat moet u regelen?</h2>
+    <p>Als u net in Nederland bent aangekomen, moet u een aantal administratieve stappen verplicht doorlopen om uw rechten te activeren:</p>
+    <ul>
+        <li><strong>Zich melden bij de gemeente:</strong> Meld u direct bij de centrale balie van het gemeentehuis. De gemeente helpt u bij het vinden van een opvangplek.</li>
+        <li><strong>Inschrijven in de BRP:</strong> U bent wettelijk verplicht om u in te schrijven in de <strong>Basisregistratie Personen (BRP)</strong> van de gemeente. Na inschrijving ontvangt u een <strong>Burgerservicenummer (BSN)</strong>. Dit heeft u nodig voor leefgeld, zorg en werk.</li>
+        <li><strong>Bewijs van verblijf (IND):</strong> Maak via de website van de IND een afspraak om uw bewijs van tijdelijke bescherming (een sticker of pasje) op te halen.</li>
+    </ul>
+
+    <h2>2. Gemeentelijke Opvang (GOO)</h2>
+    <p>Wanneer u geen eigen woonruimte heeft of kunt betalen, regelt de gemeente een plek binnen de Gemeentelijke Opvang Oekraïners (GOO).</p>
+    <ul>
+        <li><strong>Type locaties:</strong> Dit zijn collectieve opvanglocaties zoals omgebouwde kantoorpanden, hotels of tijdelijke woonunits.</li>
+        <li><strong>Beperkte ruimte:</strong> Er is <strong>geen recht op een eigen kamer</strong>. Kamers moeten vaak worden gedeeld met andere gezinnen.</li>
+    </ul>
+
+    <h2>3. Particuliere Opvang (Gastgezinnen)</h2>
+    <p>Oekraïners mogen er ook voor kiezen om bij een Nederlands gastgezin, familie of vrienden te verblijven (POO).</p>
+    <ul>
+        <li><strong>Vrijwillige basis:</strong> Gastgezinnen bieden opvang aan op basis van vrijwilligheid en ontvangen hiervoor geen vergoeding van de overheid.</li>
+        <li><strong>Maak goede afspraken:</strong> Het is belangrijk om vooraf duidelijke afspraken te maken over privacy, het gebruik van ruimtes en kosten.</li>
+    </ul>
+
+    <h2>4. Belangrijke huisregels in de opvang</h2>
+    <ul>
+        <li><strong>Orde en netheid:</strong> U bent zelf verantwoordelijk voor uw eigen kamer en draagt bij aan het schoonmaken van de gemeenschappelijke ruimtes.</li>
+        <li><strong>Nachtrust:</strong> Tussen <strong>22:00 uur en 07:00 uur</strong> geldt er verplichte nachtrust op de locaties.</li>
+        <li><strong>Tijdelijke afwezigheid (28-dagenregel):</strong> U mag maximaal 28 dagen per kalenderjaar buiten de opvang verblijven. Meld dit altijd vooraf bij de locatiemanager.</li>
+    </ul>
+
+    <h2>5. Financiële bijdrage bij werk (Eigen bijdrage)</h2>
+    <ul>
+        <li><strong>Eigen bijdrage:</strong> Oekraïense ontheemden die in de opvang wonen en inkomen uit werk ontvangen, moeten verplicht meebetalen aan de opvangkosten (gas, water, elektriciteit en eventuele maaltijden).</li>
+    </ul>
+
+    <hr>
+
+    <!-- SECTIE DIRECT REGELEN: DIVERSE FORMULIEREN -->
+    <div class="content-box">
+        <h3>⚡ Direct regelen</h3>
+        <p>Kies hieronder het formulier dat past bij uw situatie. Uw aanvraag wordt binnen Open Formulieren direct doorgestuurd naar de juiste afdeling.</p>
+        
+        <div class="button-container">
+            <!-- Knop 1: Opvang aanvragen -->
+            <a href="https://uwgemeente.nl" target="_blank" class="btn form-btn btn-opvang">
+                🏠 Opvang aanvragen
+            </a>
+
+            <!-- Knop 2: Leefgeld aanvragen -->
+            <a href="https://uwgemeente.nl" target="_blank" class="btn form-btn btn-leefgeld">
+                💰 Leefgeld aanvragen
+            </a>
+
+            <!-- Knop 3: Wijziging doorgeven -->
+            <a href="https://uwgemeente.nl" target="_blank" class="btn form-btn btn-wijziging">
+                ✏️ Wijziging doorgeven
+            </a>
+
+            <!-- Knop 4: Contact opnemen -->
+            <a href="https://uwgemeente.nl" target="_blank" class="btn form-btn btn-contact">
+                ✉️ Contact opnemen
+            </a>
+
+            <!-- Knop 5: Klacht indienen -->
+            <a href="https://uwgemeente.nl" target="_blank" class="btn form-btn btn-klacht">
+                ⚠️ Klacht indienen
+            </a>
         </div>
-    </header>
-
-    <div class="container">
-        <section class="hero">
-            <h1>Oekraïneportaal Katwijk</h1>
-            <p>Bent u gevlucht uit Oekraïne en verblijft u in Katwijk? Op deze website vindt u informatie over wonen, registratie, leefgeld, werk, zorg, onderwijs, veiligheid en vertrek uit Nederland.</p>
-            <div class="warning-box">
-                Belangrijk: kom niet zonder afspraak naar een opvanglocatie.
-            </div>
-        </section>
-
-        <h2>⚡ Direct Regelen</h2>
-        <div class="grid-buttons">
-            <a href="#" class="action-btn">🏠 Opvang aanvragen</a>
-            <a href="#" class="action-btn">💶 Leefgeld aanvragen</a>
-            <a href="#" class="action-btn">🔄 Wijziging doorgeven</a>
-            <a href="#" class="action-btn">📞 Contact opnemen</a>
-            <a href="#" class="action-btn">⚠️ Klacht indienen</a>
-        </div>
-
-        <h2>Hoofdmenu</h2>
-
-    <a href="wonen.html" style="text-decoration: none; color: inherit; display: block;">
-    <div class="menu-section">
-        <h2>🏠 Wonen</h2>
-        <p>Woont u als Oekraïense ontheemde in Katwijk of zoekt u woonruimte? De gemeente helpt bij opvang, registratie and begeleiding.</p>
-        <div class="sub-topics">Onderwerpen: Opvang, particuliere opvang en huisregels.</div>
-    </div>
-</a>
-
-        <div class="menu-section">
-            <h2>🪪 Registratie</h2>
-            <p>Woont u als Oekraïense ontheemde in Katwijk? Meld u zo snel mogelijk aan bij de gemeente. Na registratie ontvangt u een burgerservicenummer (BSN) en kunt u gebruikmaken van voorzieningen zoals leefgeld, zorg, onderwijs en ondersteuning bij werk. Neem uw identiteitsbewijs en adresgegevens mee naar de afspraak.</p>
-            <div class="sub-topics">Onderwerpen: BRP, BSN, IND en tijdelijke bescherming.</div>
-        </div>
-
-        <div class="menu-section">
-            <h2>💶 Geld</h2>
-            <p>Oekraïense ontheemden kunnen onder voorwaarden leefgeld ontvangen. Dit geld is bedoeld voor dagelijkse uitgaven zoals kleding, eten en persoonlijke verzorging. Om leefgeld te ontvangen moet u geregistreerd zijn bij de gemeente. Heeft u werk gevonden of verandert uw situatie? Geef dit dan direct door aan de gemeente.</p>
-            <div class="sub-topics">Onderwerpen: Leefgeld, inkomen en eigen bijdrage.</div>
-        </div>
-
-        <div class="menu-section">
-            <h2>💼 Werk</h2>
-            <p>Oekraïense ontheemden mogen in Nederland werken. Werk helpt bij zelfstandigheid, inkomen en integratie. Om te kunnen werken heeft u een BSN nodig and moet u geregistreerd zijn bij de gemeente. Heeft u hulp nodig bij het zoeken naar werk of het maken van een cv? De gemeente kan u doorverwijzen naar organisaties die u verder helpen.</p>
-            <div class="sub-topics">Onderwerpen: Werkcafé, stage en vrijwilligerswerk.</div>
-        </div>
-
-        <div class="menu-section">
-            <h2>🏥 Gezondheid & Gezin</h2>
-            <p>Woont u als Oekraïense ontheemde in Katwijk? Dan heeft u recht op medische zorg en ondersteuning voor uw gezin. U kunt terecht bij een huisarts, ziekenhuis of andere zorgverleners. Kinderen hebben recht op onderwijs en ondersteuning bij het leren van de Nederlandse taal. Bij spoed belt u altijd 112.</p>
-            <div class="sub-topics">Onderwerpen: Zorg, onderwijs en kinderopvang.</div>
-        </div>
-
-        <div class="menu-section">
-            <h2>🛡️ Veiligheid</h2>
-            <p>Uw veiligheid is belangrijk. Bel bij spoed altijd 112. Heeft u hulp van de politie nodig zonder spoed, bel dan 0900 8844. Meld overlast, discriminatie, geweld of andere veiligheidsproblemen bij de gemeente, politie of beheerder van uw opvanglocatie. In Nederland heeft iedereen recht op een veilige woon- en leefomgeving.</p>
-            <div class="sub-topics">Onderwerpen: Noodnummers, mensenhandel en arbeidsuitbuiting.</div>
-        </div>
-
-        <div class="menu-section">
-            <h2>🚚 Verhuizen & Vertrek</h2>
-            <p>Gaat u verhuizen binnen Nederland, verlaat u de opvanglocatie of keert u terug naar Oekraïne? Meld veranderingen in uw woon- of verblijfssituatie altijd bij de gemeente. Zo voorkomt u problemen met uw registratie, leefgeld of andere voorzieningen.</p>
-            <div class="sub-topics">Onderwerpen: Verhuizing, vertrek en terugkeer.</div>
-        </div>
-
-        <div class="menu-section">
-            <h2>📞 Contact</h2>
-            <p>Heeft u vragen over uw verblijf in Katwijk? Neem contact op met de gemeente. Wij helpen u graag met vragen over registratie, leefgeld, wonen, werk, onderwijs, gezondheid en andere voorzieningen.</p>
-            <div class="sub-topics">Onderwerpen: Team Oekraïne en organisaties.</div>
-        </div>
-
     </div>
 
-    <footer>
-        <p>&copy; 2026 Gemeente Katwijk - Prototype Voorbeeld voor ICT</p>
-    </footer>
+    <!-- DOCUMENTEN DOWNLOADBOX -->
+    <div class="content-box">
+        <h3>📄 Documenten downloaden</h3>
+        <p>Wilt u alle bovenstaande informatie en huisregels direct opslaan als één document op uw computer of telefoon?</p>
+        <button onclick="window.print()" class="btn" style="background-color: #6c757d; cursor: pointer;">
+            Download deze pagina (PDF)
+        </button>
+    </div>
 
 </body>
 </html>
